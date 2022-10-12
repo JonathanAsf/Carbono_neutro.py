@@ -1,95 +1,68 @@
 #parte 1
 
-n4 = int(input('Se sua empresa usa gasolina digite 1, se for diesel digite 2: '))
-n6 = int(input('Quantos KM sua empresa rodo no dia? '))
-resto = int((n6*5)*53)* 0.82 * 0.75 * 3.7 
-resto1 = int((n6*5)*53)* 0.82 * 3.7
-if n4 == 1:
-   print('sua empresa emitiu',resto,'kg de carbono ')
-elif n4 == 2:
-   print('sua empresa emitiu',resto1,'kg de carbono ')
+combustivel = int(input('Se sua empresa usa gasolina digite 1, se for diesel digite 2\n'))
+km = int(input('Quantos KM sua empresa rodo no dia? \n'))
+resto = int((km*5)*53)* 0.82 * 0.75 * 3.7 
+resto1 = int((km*5)*53)* 0.82 * 3.7
+if combustivel == 1:
+   print('Sua empresa emitiu:\n',resto,'kg de carbono')
+elif combustivel == 2:
+   print('Sua empresa emitiu: ',resto1,'kg de carbono')
 else:
-   print('erro de conexão tente masi tarde ...!')
+   print('Erro de conexão tente masi tarde ...!')
 
 #parte2
 
-
-
-
-
-
-
-
-
-
-
 #parte3
-n3 = int(input('Quantos fretes sua empresa faz ao mes? '))
-n2 = int(input('Qual é a media da distancia do seus clientes? '))
-resto3 = int(n3*n2)* 0.82 * 0.75 * 3.7 
-resto4 = nt(n3*n2)* 0.82 * 3.7
-if n4 == 1:
-  print('sua empresa emitiu',resto3,'KG de carbono')
-elif n4 == 2:
-  print('sua empresa emitiu',resto4,'KG de carbono')
+frete = int(input('Quantos fretes sua empresa faz ao mês? '))
+distanciaMedia = int(input('Qual é a media da distancia do seus clientes? '))
+resto3 = int(frete*distanciaMedia)* 0.82 * 0.75 * 3.7 
+resto4 = (frete*distanciaMedia)* 0.82 * 3.7
+if combustivel == 1:
+  print('Sua empresa emitiu',resto3,'KG de carbono ')
+elif combustivel == 2:
+  print('Sua empresa emitiu',resto4,'KG de carbono ')
 else:
-  print('erro de conexão tente masi tarde ...!')
-
+  print('Erro de conexão tente masi tarde ...! ')
 
 #parte4
-dimi = float(input('digite quantos KG sua empresa diminuiu nesse ano: '))
-n2 = int(dimi / 1000)
-if dimi >= 1000:
-  print('você recebeu:',n2,'creditos')
-elif dimi < 1000:
-    print('você não resebeu nenhum credito')
+
+diminuicao = float(input('Digite quantos KG sua empresa diminuiu nesse ano:\n '))
+distanciaMedia = int(diminuicao / 1000)
+if diminuicao >= 1000:
+  print('Você recebeu:',distanciaMedia,'creditos ')
+elif diminuicao < 1000:
+    print('Você não recebeu nenhum credito ')
 else:
-    print('erro de conexão tente mais tarde...')
-print('digite para qual moeda vc quer converter?')
-
-
+    print('Erro de conexão tente mais tarde... ')
+print('digite para qual moeda vc quer converter? ')
 
 #parte5
-
 resto5 = int(resto3+resto)
 resto6 = int(resto2+resto1)
-if n4 == 1:
-   print('por ano sua empresa gasta',resto5,'KG de CO2')
-elif n4 == 2:
-  print('por ano sua empresa gasta',resto6,'KG de CO2')
+if combustivel == 1:
+   print('Por ano sua empresa gasta',resto5,'KG de CO2 ')
+elif combustivel == 2:
+  print('Por ano sua empresa gasta',resto6,'KG de CO2 ')
 
 #parte 5.1
-
-if n2 > 0:
-   print('conpensando vc tera que plantar',n2*7,'arvore')
-elif n2 == 0:
-  print('conpensando foi abaixo de 1 o precissa plantar nenhuma arvore')
+if distanciaMedia > 0:
+   print('Compensando vc tera que plantar',distanciaMedia*7,'arvores')
+elif distanciaMedia == 0:
+  print('Compensando foi abaixo de 1 o precissa plantar nenhuma arvores')
 else:
-  print('erro de conexão tente novamente mais tarde...!')
-
-
-
-
-
-
-
+  print('Erro de conexão tente novamente mais tarde...!')
 
 #parte 6
-
-n5 = int(input('para dolar digite 1,para euro digite 2,para real digite 3?'))
-if n5 == 1:
-  n7 = float(n2 * 55.30)
-  print('convertendo para dolar você tera:',n7) 
-elif n5 == 2:
-  n7 = float(n2 * 57)
-  print('convertendo para euro você tera:',n7)
-elif n5 == 3:
-  n7 = float(n2 * 365)
-  print('convertendo para real você tera:',n7)
+moeda = int(input('para dolar digite 1,para euro digite 2,para real digite 3?'))
+if moeda == 1:
+  n7 = float(distanciaMedia * 55.30)
+  print('Convertendo para dolar você tera:\n','US$',n7) 
+elif moeda == 2:
+  n7 = float(distanciaMedia * 57)
+  print('Convertendo para euro você tera:\n','Є',n7)
+elif moeda == 3:
+  n7 = float(distanciaMedia * 365)
+  print('Convertendo para real você tera:\n','R$',n7)
 else:
-  print('erro de conexão tente mais tarde...')
-
-
-
-
-  
+  print('Erro de conexão tente mais tarde...\n')
