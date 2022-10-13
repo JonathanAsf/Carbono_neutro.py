@@ -9,7 +9,7 @@ if combustivel == 1:
 elif combustivel == 2:
    print('Sua empresa emitiu: ',resto1,'kg de carbono')
 else:
-   print('Erro de conexão tente masi tarde ...!')
+   print('Erro de conexão tente mais tarde ...!')
 
 #parte2
 
