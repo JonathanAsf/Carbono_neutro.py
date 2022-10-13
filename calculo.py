@@ -39,7 +39,7 @@ print('digite para qual moeda vc quer converter? ')
 
 #parte5
 resto5 = int(resto3+resto)
-resto6 = int(resto2+resto1)
+resto6 = int(resto4+resto1)
 if combustivel == 1:
    print('Por ano sua empresa gasta',resto5,'KG de CO2 ')
 elif combustivel == 2:
