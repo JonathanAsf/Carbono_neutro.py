@@ -1,32 +1,41 @@
-#parte 0
+#Apresentação.
 
-print('programa para informar quantidade de CO² emitido por sua empresa')
+print('Descubra se sua empresa possui crédito resultante de baixa emissão de CO²')
 
-#parte 1
+#Cálculo de emissão
 
-combustivel = int(input('se sua empresa usa gasolina digite 1, se for diesel digite 2')) #Precisa criar um condicional para restringir as duas  opções
+print('Escolha o combustível que sua empresa utiliza:')
+print('Gasolina: Digite 1') 
+print('Diesel: Digite 2')
+combustivel = int(input()) 
+
+#Caso outro valor seja inserido, esse condicional fechará o programa.
+
+if combustivel != 1 and combustivel != 2:
+  print('Opção indisponível, tente novamente.')
+  quit()
+
+#Fórmula para o cálculo e apresentação do resultado.
+
 km = int(input('quantos KM sua empresa rodo no dia?'))
 gasolina = int((km*5)*53)* 0.82 * 0.75 * 3.7 
 diesel = int((km*5)*53)* 0.82 * 3.7
 if combustivel == 1:
-   print('sua empresa emitiu',gasolina,'KG de carbono')
-elif combustivel == 2:
-   print('sua empresa emitiu',diesel,'KG de carbono')
+   print(f'sua empresa emitiu {gasolina:.2f}KG de carbono')
 else:
-   print('erro de conexão tente mais tarde ...!')
+   print(f'sua empresa emitiu {diesel:.2f} KG de carbono')
 
-
-#parte2
+#Cálculo de gasto apenas utilizando energia elétrica.
 
 contadeluz =  float(input("Quanto ficou a conta de luz da sua empresa"))
 respostadaluz = float(contadeluz*0.092) 
 porano = int(respostadaluz*(53*5))
-print('por ano sua empresa emiti',porano,'CO²')
+print('Sua empresa emite',porano,'CO² anualmente')
 
+#Cálculo baseado distancia percorrida
 
-#parte3
-frete = int(input('quantos fretes sua empresa faz ao mes'))
-mediakm = int(input('qual é a media da distancia do seus clientes'))
+frete = int(input('Quantos fretes sua empresa faz ao mes'))
+mediakm = int(input('Qual é a media da distancia do seus clientes'))
 gasolina1 = int(frete*mediakm)* 0.82 * 0.75 * 3.7 
 diesel1 = int(frete*mediakm)* 0.82 * 3.7
 if combustivel == 1:
@@ -36,21 +45,19 @@ elif combustivel == 2:
 else:
   print('erro de conexão tente mais tarde ...!')
 
-
-#parte4
+#Avaliação do crédito.
 
 diminuição = float(input('digite quantos KG CO² sua empresa emitiu a menos nesse ano :'))
 respostadimi = int(diminuição / 1000)
 if diminuição >= 1000:
-  print('você recebeu:',respostadimi,'creditos')
+  print('Você recebeu:',respostadimi,'créditos')
 elif diminuição < 1000:
-    print('você não resebeu nenhum credito')
+    print('Você não recebeu nenhum crédito')
 else:
-    print('erro de conexão tente mais tarde...')
+    print('Erro de conexão tente mais tarde...')
 
-
+      
 #parte5
-
 gasolinafinal = int(gasolina1 + gasolina + porano)
 dieselfinal = int(diesel + diesel1 + porano)
 if combustivel == 1:
@@ -61,7 +68,6 @@ else:
   print('Erro de conexão tente novamente mais tarde...!')
 
 #parte 6
-
 if respostadimi > 0:
    print('Para compensar a taxa de emissão, será necessário plpantar ',respostadimi*7,'árvores')
 elif respostadimi == 0:
