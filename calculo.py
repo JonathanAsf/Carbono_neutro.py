@@ -16,81 +16,80 @@ if combustivel != 1 and combustivel != 2:
 
 #Fórmula para o cálculo e apresentação do resultado
 
-km = int(input('quantos KM sua empresa rodo no dia?'))
-gasolina = int((km*5)*53)* 0.82 * 0.75 * 3.7 
-diesel = int((km*5)*53)* 0.82 * 3.7
+km = int(input('Quantos KM sua empresa roda por dia?\n'))
+gasolina = int((km*5)*53)* 0.82 * 0.75 * 3.7 #Fórmula para CO² em Kg emitido uusando gasolina
+diesel = int((km*5)*53)* 0.82 * 3.7 #Fórmula para CO² em Kg emitido uusando diesel
 if combustivel == 1:
-   print(f'sua empresa emitiu {gasolina:.2f}KG de carbono')
+   print(f'Sua empresa emitiu {gasolina:.2f}KG de carbono')
 else:
-   print(f'sua empresa emitiu {diesel:.2f} KG de carbono')
+   print(f'Sua empresa emitiu {diesel:.2f} KG de carbono')
 
 #Cálculo de gasto apenas utilizando energia elétrica
 
-contadeluz =  float(input("Quanto ficou a conta de luz da sua empresa"))
+contadeluz =  float(input("Qual é o valor médio da conta de luz da sua empresa?\n"))
 respostadaluz = float(contadeluz*0.092) 
 porano = int(respostadaluz*(53*5))
-print('Sua empresa emite',porano,'CO² anualmente')
+print(f'Sua empresa emite {porano:.2f}CO² anualmente')
 
 #Cálculo baseado distancia percorrida
 
-frete = int(input('Quantos fretes sua empresa faz ao mes'))
-mediakm = int(input('Qual é a media da distancia do seus clientes'))
+frete = int(input('Quantos fretes sua empresa faz ao mês?\n'))
+mediakm = int(input('Qual é a média da distância do seus clientes?\n'))
 gasolina1 = int(frete*mediakm)* 0.82 * 0.75 * 3.7 
 diesel1 = int(frete*mediakm)* 0.82 * 3.7
 if combustivel == 1:
-  print('sua empresa emitiu',gasolina1,'KG de CO²')
+  print(f'Sua empresa emitiu:{gasolina1:.2f}KG de CO²')
 elif combustivel == 2:
-  print('sua empresa emitiu',diesel1,'KG de CO²')
+  print(f'Sua empresa emitiu:{diesel1:.2f}KG de CO²')
 else:
-  print('erro de conexão tente mais tarde ...!')
+  print('Erro de conexão tente mais tarde ...!')
 
 #Avaliação do crédito
 
-diminuição = float(input('digite quantos KG CO² sua empresa emitiu a menos nesse ano :'))
+diminuição = float(input('Quantos KG CO² sua empresa emitiu a menos nesse ano? \n'))
 respostadimi = int(diminuição / 1000)
 if diminuição >= 1000:
-  print('Você recebeu:',respostadimi,'créditos')
+  print(f'Você recebeu:{respostadimi:.2f}créditos')
 elif diminuição < 1000:
-    print('Você não recebeu nenhum crédito')
+    print('Você não possui crédito disponível')
 else:
     print('Erro de conexão tente mais tarde...')
 
 
 #Cálculo de uso de combustível total
-gasolinafinal = int(gasolina1 + gasolina + porano)
-dieselfinal = int(diesel + diesel1 + porano)
+gasolinafinal = int(gasolina1 + gasolina + porano) #Fórmula para gasolina gasta ao ano
+dieselfinal = int(diesel + diesel1 + porano) #Fórmula para diesel gasto ao ano
 if combustivel == 1:
-   print('Por ano sua empresa gasta',gasolinafinal,'KG de CO²')
+   print(f'Por ano sua empresa gasta:{gasolinafinal:.2f}KG de CO²')
 elif combustivel == 2:
-  print('Por ano sua empresa gasta',dieselfinal,'KG de CO²')
+  print(f'Por ano sua empresa gasta?:{dieselfinal:.2f}KG de CO²')
 else:
   print('Erro de conexão tente novamente mais tarde...!')
 
 #Diminuição de Co²
 if respostadimi > 0:
-   print('Para compensar a taxa de emissão de CO², será necessário plpantar ',respostadimi*7,'árvores')
+   print('Para compensar a taxa de emissão de CO², será necessário plantar ',respostadimi*7,'árvores')
 elif respostadimi == 0:
   print('A compensação está equivalente. Não será necessário plantar mais árvores.')
 else:
-  print('erro de conexão tente novamente mais tarde...!')
+  print('Erro de conexão tente novamente mais tarde...!')
 
-#Conversão para moeda
-print("Você possui crédito, escolha a moeda que deseja obter a cotação")
-conversão = int(input('Digite 1 para dolar, Digite 2 para euro, Digite 3 para real'))
+#Conversão papa moedas
+print("Escolha uma moeda para converter o crédito existente")
+print('Dólar: Digite 1') 
+print('Euro: Digite 2')
+print('Real: Digite 3')
+
+conversão = int(input(''))
+
 if conversão == 1:
   n7 = float(respostadimi * 55.30)
-  print('Convertendo para dolar você tera:',n7) 
+  print('Convertendo para dolar você terá:',n7) 
 elif conversão == 2:
   n7 = float(respostadimi * 57)
-  print('Convertendo para euro você tera:',n7)
+  print('Convertendo para euro você terá:',n7)
 elif conversão == 3:
   n7 = float(respostadimi * 365)
-  print('Convertendo para real você tera:',n7)
+  print('Convertendo para real você terá:',n7)
 else:
-  print('erro de conexão tente mais tarde...')
-
-#parte8
-
-
-
-  
+  print('Erro de conexão tente mais tarde...')
