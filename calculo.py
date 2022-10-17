@@ -17,8 +17,8 @@ if combustivel != 1 and combustivel != 2:
 #Fórmula para o cálculo e apresentação do resultado
 
 km = int(input('Quantos KM sua empresa roda por dia?\n'))
-gasolina = int(((km*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido uusando gasolina
-diesel = int(((km*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido uusando diesel
+gasolina = int(((km*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido usando gasolina
+diesel = int(((km*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel
 
 if combustivel == 1:
    print(f'Sua empresa emitiu {gasolina:.2f}KG de carbono')
