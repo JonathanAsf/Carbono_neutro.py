@@ -17,8 +17,9 @@ if combustivel != 1 and combustivel != 2:
 #Fórmula para o cálculo e apresentação do resultado
 
 km = int(input('Quantos KM sua empresa roda por dia?\n'))
-gasolina = int((km*5)*53)* 0.82 * 0.75 * 3.7 #Fórmula para CO² em Kg emitido uusando gasolina
-diesel = int((km*5)*53)* 0.82 * 3.7 #Fórmula para CO² em Kg emitido uusando diesel
+gasolina = int(((km*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido uusando gasolina
+diesel = int(((km*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido uusando diesel
+
 if combustivel == 1:
    print(f'Sua empresa emitiu {gasolina:.2f}KG de carbono')
 else:
@@ -35,8 +36,9 @@ print(f'Sua empresa emite {porano:.2f}CO² anualmente')
 
 frete = int(input('Quantos fretes sua empresa faz ao mês?\n'))
 mediakm = int(input('Qual é a média da distância do seus clientes?\n'))
-gasolina1 = int(frete*mediakm)* 0.82 * 0.75 * 3.7 
-diesel1 = int(frete*mediakm)* 0.82 * 3.7
+gasolina1 = int((frete*mediakm)* 0.82 * 0.75 * 3.7) 
+diesel1 = int((frete*mediakm)* 0.82 * 3.7)
+
 if combustivel == 1:
   print(f'Sua empresa emitiu:{gasolina1:.2f}KG de CO²')
 elif combustivel == 2:
