@@ -1,5 +1,4 @@
-#Apresentação.
-
+#Apresentação
 print('Descubra se sua empresa possui crédito resultante de baixa emissão de CO²')
 
 #Cálculo de emissão
@@ -9,13 +8,13 @@ print('Gasolina: Digite 1')
 print('Diesel: Digite 2')
 combustivel = int(input()) 
 
-#Caso outro valor seja inserido, esse condicional fechará o programa.
+#Caso outro valor seja inserido, esse condicional fechará o programa
 
 if combustivel != 1 and combustivel != 2:
   print('Opção indisponível, tente novamente.')
   quit()
 
-#Fórmula para o cálculo e apresentação do resultado.
+#Fórmula para o cálculo e apresentação do resultado
 
 km = int(input('quantos KM sua empresa rodo no dia?'))
 gasolina = int((km*5)*53)* 0.82 * 0.75 * 3.7 
@@ -25,7 +24,7 @@ if combustivel == 1:
 else:
    print(f'sua empresa emitiu {diesel:.2f} KG de carbono')
 
-#Cálculo de gasto apenas utilizando energia elétrica.
+#Cálculo de gasto apenas utilizando energia elétrica
 
 contadeluz =  float(input("Quanto ficou a conta de luz da sua empresa"))
 respostadaluz = float(contadeluz*0.092) 
@@ -45,7 +44,7 @@ elif combustivel == 2:
 else:
   print('erro de conexão tente mais tarde ...!')
 
-#Avaliação do crédito.
+#Avaliação do crédito
 
 diminuição = float(input('digite quantos KG CO² sua empresa emitiu a menos nesse ano :'))
 respostadimi = int(diminuição / 1000)
@@ -56,8 +55,8 @@ elif diminuição < 1000:
 else:
     print('Erro de conexão tente mais tarde...')
 
-      
-#parte5
+
+#Cálculo de uso de combustível total
 gasolinafinal = int(gasolina1 + gasolina + porano)
 dieselfinal = int(diesel + diesel1 + porano)
 if combustivel == 1:
@@ -67,15 +66,15 @@ elif combustivel == 2:
 else:
   print('Erro de conexão tente novamente mais tarde...!')
 
-#parte 6
+#Diminuição de Co²
 if respostadimi > 0:
-   print('Para compensar a taxa de emissão, será necessário plpantar ',respostadimi*7,'árvores')
+   print('Para compensar a taxa de emissão de CO², será necessário plpantar ',respostadimi*7,'árvores')
 elif respostadimi == 0:
   print('A compensação está equivalente. Não será necessário plantar mais árvores.')
 else:
   print('erro de conexão tente novamente mais tarde...!')
 
-#parte 7
+#Conversão para moeda
 print("Você possui crédito, escolha a moeda que deseja obter a cotação")
 conversão = int(input('Digite 1 para dolar, Digite 2 para euro, Digite 3 para real'))
 if conversão == 1:
@@ -89,3 +88,9 @@ elif conversão == 3:
   print('Convertendo para real você tera:',n7)
 else:
   print('erro de conexão tente mais tarde...')
+
+#parte8
+
+
+
+  
