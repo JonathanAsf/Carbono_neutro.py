@@ -95,4 +95,3 @@ elif conversão == 3:
   print(f'Convertendo para real você terá: R${n7} disponíveis em crétido')
 else:
   print('Erro de conexão tente mais tarde...')
-2
