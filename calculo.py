@@ -86,12 +86,12 @@ conversão = int(input(''))
 
 if conversão == 1:
   n7 = float(respostadimi * 55.30)
-  print(f'Convertendo para dolar você terá: US${n7} disponíveis em crétido') 
+  print(f'Convertendo para dolar você terá: US${n7} disponíveis em crédito') 
 elif conversão == 2:
   n7 = float(respostadimi * 57)
-  print(f'Convertendo para euro você terá: €{n7} disponíveis em crétido')
+  print(f'Convertendo para euro você terá: €{n7} disponíveis em crédito')
 elif conversão == 3:
   n7 = float(respostadimi * 365)
-  print(f'Convertendo para real você terá: R${n7} disponíveis em crétido')
+  print(f'Convertendo para real você terá: R${n7} disponíveis em crédito')
 else:
   print('Erro de conexão tente mais tarde...')
