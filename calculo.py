@@ -60,6 +60,7 @@ else:
 
 
 #Cálculo de uso de combustível total
+
 gasolinafinal = int(gasolina1 + gasolina + porano) #Fórmula para gasolina gasta ao ano
 dieselfinal = int(diesel + diesel1 + porano) #Fórmula para diesel gasto ao ano
 if combustivel == 1:
@@ -70,6 +71,7 @@ else:
   print('Erro de conexão tente novamente mais tarde...!')
 
 #Diminuição de Co²
+
 if respostadimi > 0:
    print(f'Para compensar a taxa de emissão de CO², será necessário plantar {respostadimi*7} árvores\n')
 elif respostadimi == 0:
@@ -78,6 +80,7 @@ else:
   print('Erro de conexão tente novamente mais tarde...!')
 
 #Conversão papa moedas
+
 print("Escolha uma moeda para converter o crédito existente")
 print('Dólar: Digite 1') 
 print('Euro: Digite 2')
