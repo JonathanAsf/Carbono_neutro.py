@@ -10,3 +10,5 @@ Como benefício deste projeto, temos:
 - Melhor qualidade do ar à longo prazo.
 - Aumento da biodiversidade.
 - Incentivo ao uso de energias sustentáveis e limpas.
+
+O programa calcula a qeuivalência do gasto de combustivel com sua emissão de carbono, variando o cálculo paa gasolina e diesel. O combustível de etanol não foi contabilizado, pois sua taxa de emissão de cabono é muito baixa, portanto, não apresenta risco com alta utilização.
