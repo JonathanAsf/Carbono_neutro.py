@@ -1,6 +1,6 @@
 #Apresentação
 
-print('\n Descubra quanto de CO² sua empresa emite anualmente \n')0
+print('\n Descubra quanto de CO² sua empresa emite anualmente \n')
 
 #Cálculo de emissão
 
@@ -32,10 +32,10 @@ elif combustivel == 3:
 
 #Fórmula para o cálculo e apresentação do resultado | ano atual |
 
-kmatual = int(input('Quantos KM sua empresa roda por dia atualmente?\n'))
-gasolinaatual = int(((kmatual*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido uusando gasolina no ultimo ano
-dieselatual = int(((kmatual*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no ultimo ano
-alcoolatual = int(((kmatual*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol no ultimo ano
+kmatual = int(input('Quantos KM sua empresa roda em média por dia atualmente?\n'))
+gasolinaatual = int(((kmatual*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido usando gasolina no atual ano
+dieselatual = int(((kmatual*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no atual ano
+alcoolatual = int(((kmatual*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol no atual ano
 
 if combustivel == 1:
    print(f'Sua empresa emitiu por ano {gasolinaatual:.2f} KG de carbono')
@@ -44,9 +44,17 @@ elif combustivel == 2:
 elif combustivel == 3:
     print(f'Sua empresa emitiu por ano {dieselatual:.2f} KG de carbono')
 
-#Cálculo baseado distancia percorrida
+#Cálculo baseado na distância média percorrida | ano passado |
 
-frete = int(input('Quantos fretes sua empresa faz ao mês?\n'))
+freteantigo = int(input('Qual era a média mensal de fretes da sua empresa no ano passado?\n'))
+mediakmantigo = int(input('Qual era a distância(km) média dos seus clientes?\n'))
+distgasoantigo = int((freteantigo*mediakmantigo)* 0.82 * 0.75 * 3.7)
+distdiselantigo = int((freteantigo*mediakmantigo)* 0.82 * 3.7)
+distalcoantigo = int((freteantigo*mediakmantigo)*2.716)
+
+#Cálculo baseado na distância média percorrida | ano atual |
+
+frete = int(input('Quantos fretes sua empresa faz ao mês (atualmente) ?\n'))
 mediakm = int(input('Qual é a média da distância(km) do seus clientes?\n'))
 distgaso = int((frete*mediakm)* 0.82 * 0.75 * 3.7)
 distdisel = int((frete*mediakm)* 0.82 * 3.7)
@@ -62,9 +70,9 @@ else:
   print('Erro de conexão tente mais tarde ...!')
 
 #Cálculo de uso de combustível total
-gasolinafinal = int(distgaso) #Fórmula para gasolina gasta ao ano
-dieselfinal = int(diesel + distdisel) #Fórmula para diesel gasto ao ano
-alcoolfinal = int(alcool + distalco) #Fórmula para alcool gasto ao ano
+gasolinafinal = int(gasolinaatual + distgaso) #Fórmula para gasolina gasta ao ano
+dieselfinal = int(dieselatual + distdisel) #Fórmula para diesel gasto ao ano
+alcoolfinal = int(alcoolatual + distalco) #Fórmula para alcool gasto ao ano
  
 if combustivel == 1:
    print(f'Sua empresa emite: {gasolinafinal} KG de CO² por ano\n')
@@ -93,7 +101,7 @@ else:
 #Caso não haja equivalência, será feito um cálculo visando alcança-la
 
 if combustivel ==1:
-    print('Para compensar a taxa de emissão de CO², será necessário plantar ',emgasol,'árvores\n')
+    print('Para compensar a taxa de emissão de CO², será necessário plantar ',emgasol*7,'árvores\n')
 elif combustivel ==2:
     print('Para compensar a taxa de emissão de CO², será necessário plantar ',emdie*7,'árvores\n')
 elif combustivel ==3:
