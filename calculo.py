@@ -1,6 +1,6 @@
 #Apresentação
 
-print('\n Descubra quanto de CO² sua empresa emite anualmente \n')
+print('\n Descubra quanto de CO² sua empresa emite anualmente \n')0
 
 #Cálculo de emissão
 
@@ -16,19 +16,33 @@ if combustivel != 1 and combustivel != 2 and combustivel !=3:
   print('Opção indisponível, tente novamente.')
   quit()
 
-#Fórmula para o cálculo e apresentação do resultado
+#Fórmula para o cálculo e apresentação do resultado | ano passado |
 
-km = int(input('Quantos KM sua empresa roda por dia?\n'))
-gasolina = int(((km*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido uusando gasolina
-diesel = int(((km*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel
-alcool = int(((km*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol
+kmantigo = int(input('Qual era a média de km rodados por dia no ultimo ano?\n'))
+gasolinaantigo = int(((kmantigo*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido usando gasolina no ultimo ano
+dieselantigo = int(((kmantigo*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no ultimo ano
+alcoolantigo = int(((kmantigo*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol no ultimo ano
 
 if combustivel == 1:
-   print(f'Sua empresa emitiu por ano {gasolina:.2f} KG de carbono')
+   print(f'Sua empresa emitiu por ano {gasolinaantigo:.2f} KG de carbono')
 elif combustivel == 2:
-   print(f'Sua empresa emitiu por ano {alcool:.2f} KG de carbono')
+   print(f'Sua empresa emitiu por ano {alcoolantigo:.2f} KG de carbono')
 elif combustivel == 3:
-    print(f'Sua empresa emitiu por ano {diesel:.2f} KG de carbono')
+    print(f'Sua empresa emitiu por ano {dieselantigo:.2f} KG de carbono')
+
+#Fórmula para o cálculo e apresentação do resultado | ano atual |
+
+kmatual = int(input('Quantos KM sua empresa roda por dia atualmente?\n'))
+gasolinaatual = int(((kmatual*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido uusando gasolina no ultimo ano
+dieselatual = int(((kmatual*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no ultimo ano
+alcoolatual = int(((kmatual*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol no ultimo ano
+
+if combustivel == 1:
+   print(f'Sua empresa emitiu por ano {gasolinaatual:.2f} KG de carbono')
+elif combustivel == 2:
+   print(f'Sua empresa emitiu por ano {alcoolatual:.2f} KG de carbono')
+elif combustivel == 3:
+    print(f'Sua empresa emitiu por ano {dieselatual:.2f} KG de carbono')
 
 #Cálculo baseado distancia percorrida
 
@@ -63,7 +77,6 @@ else:
 
 
 #Avaliação do crédito
-#Necessário reformular essa parte do código
 if combustivel == 1:
   emgasol = int(gasolinafinal/1000) #Emissão de carbono utilizando gasolina
   print(f'')
