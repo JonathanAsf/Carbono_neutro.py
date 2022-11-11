@@ -89,38 +89,40 @@ elif combustivel == 2:
 elif combustivel == 3:
     print(f'\nSua empresa emitiu este ano: {dieselatual:.2f}KG de carbono\n')
 
+#Cálculo do crédito
+if combustivel == 1:
+  emgasol =  int(gasolinaantigo - gasolinaatual)/1000
+
+elif combustivel == 2:
+  emdie = int(dieselantigo - dieselatual)/1000
+
+elif combustivel == 3:
+  emalco = int(alcoolantigo - alcoolatual)/1000
+    
+#Conversão para moedas
 #Avaliação do crédito
 
 if combustivel == 1:
    if gasolinaatual > gasolinaantigo or gasolinaantigo == gasolinaatual:
     print('Você não possuí crédito')
+    print('voce possui',int(emgasol),'creditos negativos')
     print('Não houve diminuição de gás carbono em relação ao ano passado')
-    quit()
-
+   elif alcoolatual > alcoolantigo and alcoolantigo == alcoolatual:
+    print('voce possui',int(emgasol),'creditos')
 elif combustivel == 2:
    if dieselatual > dieselantigo or dieselatual == dieselantigo:
     print('Você não possuí crédito')
+    print('voce possui',int(emdie),'creditos negativos')
     print('Não houve diminuição de gás carbono em relação ao ano passado')
-    quit()
-
+   elif alcoolatual > alcoolantigo and alcoolantigo == alcoolatual: 
+    print('voce possui',int(emdie),'creditos')
 elif combustivel == 3: 
    if alcoolatual > alcoolantigo or alcoolantigo == alcoolatual:
      print('Você não possuí crédito')
+     print('voce possui',int(emalco),'creditos negativos')
      print('Não houve diminuição de gás carbono em relação ao ano passado')
-     quit()
-
-#Cálculo do crédito
-if combustivel == 1:
-  emgasol =  (gasolinaantigo - gasolinaatual)/1000
-
-elif combustivel == 2:
-  emdie = (dieselantigo - dieselatual)/1000
-
-elif combustivel == 3:
-  emalco = (alcoolantigo - alcoolatual)/1000
-    
-#Conversão para moedas
-
+   elif alcoolatual > alcoolantigo and alcoolantigo == alcoolatual:
+     print('voce possui',int(emalco),'creditos')
 #Gasolina
 if  combustivel == 1:
     credito = float(emgasol * 55.30)
