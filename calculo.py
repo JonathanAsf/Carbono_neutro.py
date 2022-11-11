@@ -77,7 +77,7 @@ else:
 kmatual = int(input('Quantos KM sua empresa roda em média por dia atualmente? '))
 
 gasolinaatual = int(((kmatual*5)*53)* 0.82 * 0.75 * 3.7) #Fórmula para CO² em Kg emitido usando gasolina no atual ano
-dieselatual = int(((kmatual*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no atual ano10
+dieselatual = int(((kmatual*5)*53)* 0.82 * 3.7) #Fórmula para CO² em Kg emitido usando diesel no atual ano
 alcoolatual = int(((kmatual*5)*53)*2.716) #Fórmula para Co² em Kg emitido usando etanol no atual ano
 
 if combustivel == 1:
